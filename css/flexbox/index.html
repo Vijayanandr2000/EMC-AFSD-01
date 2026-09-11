@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox</title>
+  <style>
+    /* .container{
+      display: flex;
+
+      border: 1px solid black;
+
+      flex-wrap: wrap;
+    }*/
+
+    .item, .child1, .child2{
+      background-color: red;
+      border: 1px solid black;
+      width: 120px;
+      flex-grow: 1;
+    }
+
+    .section1, .section2{
+      display: flex;
+      /* border: 1px solid black; */
+      gap:10px;
+    }
+
+    .section2{
+      margin-top: 20px;
+    }
+
+    .child1, .child2{
+      height: 150px;
+    }
+</style>
+</head>
+<body>
+
+  <!-- <div class="container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+    <div class="item">Item 6</div>
+    <div class="item">Item 7</div>
+    <div class="item">Item 8</div>
+    <div class="item">Item 9</div>
+  </div> -->
+
+  <div class="section1">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+  </div>
+
+  <div class="section2">
+    <div class="child1">
+      <div class="section3"></div>
+      <div class="section4">
+        <div class="child1"></div>
+        <div class="child2"></div>
+      </div>
+    </div>
+    <div class="child2"></div>
+  </div>
+
+</body>
+</html>
+

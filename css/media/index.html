@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+
+    <style>
+      h1 {
+        color: blue;
+      }
+
+      /* @media screen {
+
+      } */
+
+      @media (max-width: 546px) {
+        h1 {
+          color: red;
+        }
+      }
+
+      @media (min-width: 546px) and (max-width: 768px) {
+        h1 {
+          color: purple;
+        }
+      }
+
+      @media print {
+        h1 {
+          color: black;
+        }
+      }
+
+      .container {
+        /* display: flex;
+        gap: 40px;
+        flex-wrap: wrap; */
+        display: grid;
+        grid-template-areas:
+          'a a b'
+          'c d b'
+          'e f f';
+        gap: 10px;
+      }
+
+      .item {
+        border: 1px solid black;
+        background-color: red;
+        padding: 10px;
+        text-align: center;
+      }
+
+      .a {
+        grid-area: a;
+      }
+      .b {
+        grid-area: b;
+      }
+      .c {
+        grid-area: c;
+      }
+      .d {
+        grid-area: d;
+      }
+      .e {
+        grid-area: e;
+      }
+      .f {
+        grid-area: f;
+      }
+
+      @media (max-width: 546px) {
+        .container {
+          grid-template-areas:
+            'a'
+            'c'
+            'e'
+            'f'
+            'b'
+            'd';
+        }
+
+        .item:last-child{
+          display: none;
+        }
+      }
+
+      @media (547px <= width <= 768px) {
+        .container {
+          grid-template-areas:
+            'a b'
+            'c d'
+            'e f';
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1>Vijay</h1> -->
+
+    <div class="container">
+      <div class="item a">Item 1</div>
+      <div class="item b">Item 2</div>
+      <div class="item c">Item 3</div>
+      <div class="item d">Item 4</div>
+      <div class="item e">Item 5</div>
+      <div class="item f">Item 6</div>
+    </div>
+  </body>
+</html>
