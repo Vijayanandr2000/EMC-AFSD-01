@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+
+    <style>
+      * {
+        margin: 0;
+        /* padding: 0; */
+        /* box-sizing: border-box; */
+      }
+
+      header {
+        background-color: grey;
+        text-align: center;
+        padding: 10px 0 ;
+      }
+
+      main{
+        margin-top: 20px;
+        text-align: center;
+        input {
+          padding: 10px;
+          outline: none;
+          border: 0;
+          border-bottom: 1px solid black;
+        }
+
+        button{
+          padding: 10px;
+          outline: none;
+          border: 0;
+          border-radius: 10px;
+          width: 50px;
+        }
+      }
+
+      section {
+        margin-top: 20px;
+        background-color: whitesmoke;
+        text-align: center;
+
+        ol {
+          margin-top: 20px;
+        }
+
+        li {
+          margin-bottom: 10px;
+        }
+
+        li button {
+          margin-left: 10px;
+        }
+
+        li button {
+          padding: 10px;
+          outline: none;
+          border: 0;
+          border-radius: 10px;
+          width: 50px;
+          transition: 1s;
+        }
+
+        li button:hover {
+          background-color: tomato;
+        }
+      }
+
+
+
+
+      .completed {
+        text-decoration: line-through;
+        opacity: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Todo</h1>
+    </header>
+
+    <main>
+      <input placeholder="Enter your TODO..!" />
+      <button>Add</button>
+    </main>
+
+    <section>
+      <ol id="taskLists">
+        <li class="completed">Item - 1 <button>DEL</button></li>
+        <li class="completed">Item - 2<button>DEL</button></li>
+        <li class="completed">Item - 3 <button>DEL</button></li>
+      </ol>
+    </section>
+
+    <script>
+      document.querySelector('button').addEventListener('click', function () {
+        const todoInput = document.querySelector('input').value;
+        // console.log(todoInput)
+
+        // document.getElementById("head").innerHTML = `<i>${todoInput}</i>`
+
+        const list = document.createElement('li');
+        const delBtn = document.createElement('button');
+
+        list.innerText = todoInput;
+
+        list.addEventListener('click', function () {
+          list.classList.toggle('completed');
+        });
+
+        delBtn.innerText = 'DEL';
+
+        delBtn.addEventListener('click', function () {
+          list.remove();
+        });
+
+        list.appendChild(delBtn);
+        document.getElementById('taskLists').appendChild(list);
+
+        // console.log(list)
+      });
+    </script>
+  </body>
+</html>

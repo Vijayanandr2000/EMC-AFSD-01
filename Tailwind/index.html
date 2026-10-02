@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind - setup</title>
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body>
+  <div class="flex h-screen">
+    <!-- Sidebar -->
+     <aside class="hidden md:flex flex-col bg-gray-100 p-4 w-64">
+      <button class="mb-6 border rounded-lg bg-white px-4 py-2 text-left hover:bg-gray-50">+ New Chat</button>
+
+      <p class="mb-3 text-sm font-semibold text-gray-500">Recent</p>
+
+      <div>
+        <div class="cursor-pointer p-2 hover:bg-gray-200 rounded-lg">
+          Chat 1
+        </div>
+        <div class="cursor-pointer p-2 hover:bg-gray-200 rounded-lg">
+          Chat 2
+        </div>
+        <div class="cursor-pointer p-2 hover:bg-gray-200 rounded-lg">
+          Chat 3
+        </div>
+      </div>
+     </aside>
+
+     <!-- Main Chat -->
+      <main class="flex-1">
+        <!-- Mobile Header` -->
+        <div class="flex justify-between border p-4 md:hidden">
+          <button>
+            ☰
+          </button>
+
+          <p>ChatGPT</p>
+
+          <button>+</button>
+
+        </div>
+        <!-- Header -->
+        <header class="hidden border-b p-4 md:block">
+          <h2 class="font-semibold">New Chat</h2>
+        </header>
+
+        <!-- Messages -->
+         <section class="p-4 flex flex-col gap-4">
+          <!-- Users -->
+           <div class="flex justify-end">
+            <div class="bg-gray-200 p-3 rounded-lg">
+              Explain Tailwind Css
+            </div>
+           </div>
+
+          <!-- AI -->
+           <div class="flex gap-3 bg-black text-white rounded-lg max-w-lg">
+            <div class="p-3 rounded-lg">
+              A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design
+            </div>
+           </div>
+
+           <!-- Users -->
+           <div class="flex justify-end">
+            <div class="bg-gray-200 p-3 rounded-lg">
+              Explain Tailwind Css
+            </div>
+           </div>
+
+          <!-- AI -->
+           <div class="flex gap-3 bg-black text-white rounded-lg max-w-lg">
+            <div class="p-3 rounded-lg">
+              A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design
+            </div>
+           </div>
+
+           <!-- Users -->
+           <div class="flex justify-end">
+            <div class="bg-gray-200 p-3 rounded-lg">
+              Explain Tailwind Css
+            </div>
+           </div>
+
+          <!-- AI -->
+           <div class="flex gap-3 bg-black text-white rounded-lg max-w-lg">
+            <div class="p-3 rounded-lg">
+              A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design
+            </div>
+           </div>
+         </section>
+
+         <!-- Input -->
+          <div >
+            <div class="flex-1 items-center max-w-lg mx-auto relative">
+              <input type="text" placeholder="Messages...!"
+              class="border p-2 rounded-lg outline-none w-[460px]"
+              >
+              <button class="bg-black text-white px-2 py-1 rounded-lg hover:bg-gray-500 absolute right-[60px] top-[5px]">↑</button>
+            </div>
+          </div>
+      </main>
+  </div>
+</body>
+</html>
